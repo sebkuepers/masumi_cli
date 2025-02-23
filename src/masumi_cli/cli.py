@@ -1,6 +1,6 @@
 import typer
 from importlib.metadata import version, PackageNotFoundError
-from masumi_cli.utils.config import load_config  # Import the YAML loader
+from masumi_cli.utils.config import load_full_config  # Import the YAML loader
 
 # Create the main Typer app
 app = typer.Typer()
@@ -37,7 +37,7 @@ def main(
 
     # Load configuration once and store it in the context
     try:
-        config = load_config()
+        config = load_full_config()
     except Exception as e:
         typer.echo(f"Error loading configuration: {e}")
         raise typer.Exit(code=1)

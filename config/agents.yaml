@@ -1,0 +1,18 @@
+agents:
+  - local_id: "a1"  
+    masumi_id: "agent-001-very-long-id-from-masumi-service"  
+    name: "Local Agent One"  
+    host: "localhost"  
+    port: 3000  
+    registered: true  
+    registered_at: "2023-03-01T12:00:00Z"  
+    local_path: "/Users/sebastian/projects/agent_one"  
+
+  - local_id: "a2"  
+    masumi_id: null  
+    name: "Local Agent Two"  
+    host: "localhost"  
+    port: 3001  
+    registered: false  
+    registered_at: null  
+    local_path: "/Users/sebastian/projects/agent_two"
