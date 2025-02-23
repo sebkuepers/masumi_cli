@@ -14,10 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-masumi-cli = "masumi_cli.cli:app"
+masumi = "masumi_cli.cli:app"
 
 [tool.uv]
-# Tell uv to use the src layout for package discovery.
-packages = [
-  { include = "masumi_cli", from = "src" }
-]
+package = true
