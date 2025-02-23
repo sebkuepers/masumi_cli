@@ -1,9 +1,23 @@
 [project]
-name = "masumi-cli"
-version = "0.1.0"
-description = "Add your description here"
+name = "masumi_cli"
+version = "0.0.1"
+description = "A CLI tool for the Masumi Node."
+authors = [
+  { name = "Sebastian", email = "sebastian@example.com" }
+]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.8"
 dependencies = [
-    "typer>=0.15.1",
+  "typer>=0.7.0",
+  "pyyaml>=6.0",
+  "requests>=2.25.0"
+]
+
+[project.scripts]
+masumi-cli = "masumi_cli.cli:app"
+
+[tool.uv]
+# Tell uv to use the src layout for package discovery.
+packages = [
+  { include = "masumi_cli", from = "src" }
 ]
